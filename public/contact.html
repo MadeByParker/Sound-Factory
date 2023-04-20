@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Factory</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <nav>
+            <div class="logo">
+                <img src="./images/Sound Factory Logo_Open White_Highlight.png" width="180" height="80" alt="Logo Image">
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
+                <div class="border"></div>
+                <li><a href="./music-school.html">Music School</a></li>
+                <li><a href="./live.html">Live</a></li>
+                <li><a href="./studio.html">Studios</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact" id="contact">
+			<div class="contact-container">
+			<h3>Contact us</h3>
+				<div class="contact-column">
+					<div class="text-field-name-1">
+							<form>
+								<input type="text" class="text" value=" Enter your name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Enter your name';}">
+							</form>
+					</div>
+					<div class="text-field-email-1">
+							<form>
+								<input type="text" class="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
+							</form>
+					</div>
+					<div class="text-field-subject-1">
+							<form>
+								<input type="text" class="text" value=" Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' Subject';}">
+							</form>
+					</div>
+				</div>
+				<div class="contact-column">
+						<div class="text-field-area-">
+							<form>
+								<textarea value="Message:" onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Message';">Message</textarea>
+							</form>
+						</div>
+						<div class="button">
+							<form>
+								<input type="submit" value="send message">
+							</form>
+						</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h4>Sound Factory</h4>
+                            <ul>
+                                <img src="./images/Sound Factory Logo_Open White_Highlight.png" width="140"alt="logo">
+                                <br>
+                                <li><a class="email" href="#"><i class="fa-regular fa-envelope"></i> gshelton@soundfactorysw.co.uk</a></li>
+                                <li><a class="phone" href="#"><i class="fa-solid fa-phone"></i> 01202 123456</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>company</h4>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#">Education</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Studios</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>follow us</h4>
+                            <div class="social-links">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           </footer>
+
+
+            <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/dc3bcb73c6.js" crossorigin="anonymous"></script>
+      <script src="./js/index.js"></script>
+<script src="./js/firebase-setup.js"></script>
+</body>
+</html>
