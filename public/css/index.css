@@ -13,33 +13,31 @@
     --white: rgb(255, 255, 255);
     
   }
-  
-  
 
-  a {
-    color: white;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Exo 2", sans-serif;
-  }
+a {
+color: white;
+}
 
-  *,
-    *::before,
-    *::after {
-        box-sizing: inherit;
-    }
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
+font-family: "Exo 2", sans-serif;
+}
 
-  html {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 
-  html,
+html {
+box-sizing: border-box;
+}
+
+html,
 body {
 	height: 100vh;
 	width: 100vw;
@@ -643,8 +641,8 @@ ul{
 }
 @media(max-width: 574px){
   .footer-col{
-    width: 100%;
-}
+        width: 100%;
+    }
 }
 
 
@@ -655,31 +653,31 @@ ul{
     visibility: hidden;
     width: 0;
     height: 0;
-  }
+}
   
-  .contact-container {
+.contact-container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
+}
   
-  .contact-column{
+.contact-column{
     position: relative;
     min-height: 1px;
     padding-top: 45px;
     padding-right: 15px;
     padding-left: 15px;
-  }
+}
   
   /*-- contact-section --*/
-  .contact{
-        background: #292D46;
-      padding:6rem;
-      overflow: hidden;
-        height: 80vh;;
-  }
-  .contact h3{
+.contact{
+    background: #292D46;
+    padding:6rem;
+    overflow: hidden;
+    height: 80vh;;
+}
+.contact h3{
     padding-top: 250px;
     font-size: 2.5em;
     font-weight: 400;
@@ -693,16 +691,17 @@ ul{
     font-family: inherit;
     font-weight: 500;
     line-height: 1.1;
-  }
-  .contact p{
-      font-size:1.2em;
-      font-weight:400;
-      color: #ff6f5c;
-      margin:1em 0em 4em;
-      text-align:center;
-  }
-  .contact form input[type="text"]{
-        width: 100%;
+}
+.contact p{
+    font-size:1.2em;
+    font-weight:400;
+    color: #ff6f5c;
+    margin:1em 0em 4em;
+    text-align:center;
+}
+  
+.contact form input[type="text"]{
+    width: 100%;
     padding: 15px 0;
     margin-bottom: 7%;
     background: none;
@@ -714,42 +713,43 @@ ul{
     border: 2px solid #FFFFFF;
     border-radius: 10px;
   }
-  .contact form textarea {
-      resize:none;
-      width: 100%;
-      padding: 20px 0;
-      margin-bottom: 5%;
-      background:none;
-      color: #FFFFFF;
-      font-size:18px;
-      outline: none;
-      font-weight:400;
-      text-indent: 10px;
-      border: 2px solid #FFFFFF;
-      min-height: 205px;
-      border-radius: 10px;
-  }
-  .contact form input[type="submit"] {
 
-      display: block;
-      outline: none;
-      border: none;
-      border-radius:5px;
-      text-transform:uppercase;
-      font-weight: bold;
-      cursor: pointer;
-      float: right;
-      text-decoration: none;
-      color: var(--white);
-      background-color: var(--highlight-color);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 0.5rem;
-      transition: all 500ms ease;
-  }	
-  .contact form input[type="submit"]:hover{
+.contact form textarea {
+    resize:none;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 5%;
+    background:none;
+    color: #FFFFFF;
+    font-size:18px;
+    outline: none;
+    font-weight:400;
+    text-indent: 10px;
+    border: 2px solid #FFFFFF;
+    min-height: 205px;
+    border-radius: 10px;
+}
+
+.contact form input[type="submit"] {
+    display: block;
+    outline: none;
+    border: none;
+    border-radius:5px;
+    text-transform:uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--highlight-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem;
+    transition: all 500ms ease;
+}	
+.contact form input[type="submit"]:hover{
     color: var(--highlight-color);
     background: linear-gradient(
         135deg,
@@ -761,7 +761,7 @@ ul{
     text-decoration: none;
     transition: all 500ms ease;
     cursor: pointer;
-  }
+}
   /*-- contact --*/
   
   .wrap {
@@ -879,8 +879,6 @@ ul{
     padding: 20px;
   }
   
-  
-  
   .text h2{
     font-size: 48px;
     padding: 20px;
@@ -912,3 +910,33 @@ ul{
 .secondary-section {
     background-color: #222222;
 }
+
+.team-header{
+    text-align:center;
+    color: white;
+    padding: 20px;
+    font-size: 32px;
+  }
+
+  .team-card{
+    width:20%;
+    gap:5%;
+    border:1px solid grey;
+    border-radius:4px;
+    background-color:white;
+  }
+  .tm-description{
+    padding:5px 10px;
+  }
+  .team-card img{
+    width:100%;
+    height:auto;
+  }
+  .team-body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:5%;
+    margin-top:20px;
+    padding: 3rem 0;
+  }
