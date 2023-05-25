@@ -1,6 +1,8 @@
+/* IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
+/* VARIABLES */
 .lock-scroll {
     overflow: hidden;
 }
@@ -14,10 +16,7 @@
     
   }
 
-a {
-color: white;
-}
-
+/* STYLES */
 * {
 margin: 0;
 padding: 0;
@@ -50,6 +49,28 @@ body{
     margin: 0;
 }
 
+a {
+    color: white;
+}
+
+/*Styling Navigation Bar*/
+nav {
+    width: 100%;
+    color: white;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+  }
+  
+  /* Styling logo */
+.logo {
+    padding: 1vh 1vw;
+  }
+
 .border {
     border: 1px solid var(--border-color);
     height: 40px;
@@ -62,28 +83,6 @@ body{
     }
 }
 
-/*Styling Navigation Bar*/
-nav{
-    height: 6rem;
-    width: 100vw;
-    color: white;
-    background-color: #131418;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
-    display: flex;
-    position: fixed;
-    z-index: 10;
-}
-
-/*Styling logo*/
-.logo{
-    padding:1vh 1vw;
-    justify-content: center;
-    align-items: center;
-    place-content: center;
-    display: flex;
-}
-
-
 /*Styling Links*/
 .nav-links{
     display: flex;
@@ -95,24 +94,34 @@ nav{
     align-items: center;
     text-transform: uppercase;
 }
-.nav-links li a{
+
+.nav-links li .nav-link {
     text-decoration: none;
-    margin: 0 0.7vw;
-    transition: letter-spacing 0.5s ease-in-out;
+    margin: 0 1.5vw;
+    transition: all 0.5s ease-in-out;
     transform: translateX(0px);
-}
-.nav-links li a:hover {
+  }
+  
+  .nav-links li .nav-link:hover {
     color: var(--highlight-color);
     letter-spacing: 5px;
     transform: translateX(10px);
     transition: all 0.5s ease-in-out;
-}
+  }
+  
+  .nav-links li .nav-link:not(:hover) {
+    transition: all 0.5s ease-in-out;
+    transform: translateX(0px);
+  }
+
 .nav-links li {
     position: relative;
+    padding: 10px 0;
 }
 .nav-links li a::before {
     content: "";
     display: block;
+
     height: 3px;
     width: 0%;
     background-color: var(--highlight-color);
@@ -132,23 +141,62 @@ nav{
     background-color: var(--highlight-color);
     position: absolute;
     transition: all ease-in-out 250ms;
-    margin: 0 10% 0 0;
+    margin: 0 -10% 0 0;
 }
 
-/*Styling Hamburger Icon*/
-.hamburger div{
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 1.5vw;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .nav-links li a:hover {
+    color: var(--highlight-color);
+  }
+
+  .nav-links li ul {
+    display: none;
+    background-color: #131418;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content; /* Adjust the width to fit the content */
+    white-space: nowrap; /* Prevent line breaks */
+    box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    padding: 10px 0;
+  }
+  
+  .nav-links li ul li a {
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    width: max-content; /* Adjust the width to fit the content */
+    white-space: nowrap; /* Prevent line breaks */
+  }
+  
+  
+  .nav-links li:hover > ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+/* Styling Hamburger Icon */
+.hamburger {
+    display: none;
+  }
+  
+  .hamburger .line {
     width: 30px;
-    height:3px;
+    height: 3px;
     background: #f2f5f7;
     margin: 5px;
     transition: all 0.3s ease;
-}
-.hamburger{
-    display: none;
-}
+  }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1100px){
     nav{
         position: fixed;
         z-index: 3;
@@ -208,6 +256,21 @@ nav{
     li.fade{
         opacity: 1;
     }
+    .nav-links li:hover > ul {
+        display: none;
+      }
+    .nav-links li a::before,
+    .nav-links li a::after {
+    display: none;
+    }
+    .nav-links li ul {
+    display: none;
+    position: static;
+    width: 100%;
+    }
+    .nav-links li ul li a {
+    padding: 15px 20px;
+    }
 }
 /*Animating Hamburger Icon on Click*/
 .toggle .line1{
@@ -222,7 +285,8 @@ nav{
 }
 
 
-  .slider, 
+/* Styling for the slider */
+.slider, 
 .slider > div {
     /* Images default to Center Center. Maybe try 'center top'? */
     z-index: 1;
@@ -257,7 +321,7 @@ nav{
     width: 30px;
     padding: 10px 13px;
     background: #fff;
-    background: rgba(255, 255, 255, .3);
+    background: rgba(255, 255, 255, .4);
     cursor: pointer;
     line-height: 0;
     box-sizing: content-box;
@@ -406,6 +470,7 @@ nav{
 }
 
 
+/* Animation for the title bar */
 @keyframes boing {
     0% {
         transform: scale(1.2);
@@ -424,6 +489,43 @@ nav{
     }
 }
 
+@-webkit-keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Styling the cards*/
 .card-group {
     width: 100%;
     height: fit-content;
@@ -439,6 +541,7 @@ nav{
 .card {
     margin: 1rem;
     width: 30%;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -452,8 +555,9 @@ nav{
 
 .card-image {
     width: 100%;
-    object-fit: cover;
     height: 100%;
+    object-fit: cover;
+    object-position: center; /* Show the center portion of the image */
     transition: all 0.5s ease;
 }
 
@@ -645,7 +749,7 @@ ul{
     }
 }
 
-
+/* Styling contact form*/
 .clear {
     clear: both;
     display: block;
@@ -672,7 +776,7 @@ ul{
   
   /*-- contact-section --*/
 .contact{
-    background: #292D46;
+    background: #131313;
     padding:6rem;
     overflow: hidden;
     height: 80vh;;
@@ -940,3 +1044,38 @@ ul{
     margin-top:20px;
     padding: 3rem 0;
   }
+
+  /* coming soon */
+
+  .coming-soon {
+    text-align: center;
+    font-size: 72px;
+    letter-spacing: 0.3rem;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    background: black;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 span {
+    color: #fff;
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+p {
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
