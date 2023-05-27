@@ -68,9 +68,8 @@ node_modules/
 #vscode settings
 .vscode/
 
-# logo files
+# main files
 
 files
-.vscode/settings.json
-music-school.html
 template.html
+music-school.html
