@@ -73,3 +73,4 @@ node_modules/
 files
 template.html
 music-school.html
+public/js/firebase-setup.js
