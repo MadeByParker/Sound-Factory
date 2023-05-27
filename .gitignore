@@ -64,3 +64,13 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+#vscode settings
+.vscode/
+
+# logo files
+
+files
+.vscode/settings.json
+music-school.html
+template.html
