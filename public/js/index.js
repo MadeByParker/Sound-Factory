@@ -184,3 +184,23 @@ hamburger.addEventListener('click', ()=>{
       });
     }); // end DOM ready
   })(jQuery); // end jQuery
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const popupOverlays = document.querySelectorAll(".popup-overlay");
+  
+    document.querySelectorAll(".popup-btn").forEach(function(btn, index) {
+      btn.addEventListener("click", function() {
+        popupOverlays[index].style.display = "block";
+        document.body.style.overflow = "hidden";
+      });
+    });
+  
+    document.addEventListener("click", function(event) {
+      if (event.target.classList.contains("closePopup")) {
+        const popupOverlay = event.target.closest(".popup-overlay");
+        popupOverlay.style.display = "none";
+        document.body.style.overflow = "auto";
+      }
+    });
+  });
+  
