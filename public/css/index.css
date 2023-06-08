@@ -163,7 +163,6 @@ nav {
 .nav-links li a::before {
     content: "";
     display: block;
-
     height: 3px;
     width: 0%;
     background-color: var(--highlight-color);
@@ -196,6 +195,39 @@ nav {
     color: var(--highlight-color);
   }
 
+  .nav-links li.dropdown > a .chevron {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #ffffff transparent transparent transparent;
+    margin-left: 5px;
+    padding-top: -5px;
+    transform: translateY(1px);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .nav-links li.dropdown.open > a .chevron {
+    transform: translateY(1px) rotate(180deg);
+  }
+  
+  .team-header {
+    text-align: center;
+    font-size: 48px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .team-header {
+      font-size: 20px;
+    }
+  }
+  
+
   .nav-links li ul {
     display: none;
     background-color: #131418;
@@ -216,13 +248,7 @@ nav {
     width: max-content; /* Adjust the width to fit the content */
     white-space: nowrap; /* Prevent line breaks */
   }
-  
-  
-  .nav-links li:hover > ul {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-  }
+
 
 /* Styling Hamburger Icon */
 .hamburger {
@@ -904,7 +930,8 @@ ul{
   .partner-image img {
     width: 100%;
     max-width: 400px; /* Adjust the maximum width as needed */
-    height: auto;
+    height: 100%;
+    max-height: 700px; /* Adjust the maximum height as needed */
   }
   
   .caption {

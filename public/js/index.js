@@ -161,40 +161,21 @@ hamburger.addEventListener('click', ()=>{
     
   }); 
   
-  (function($) {
-    $(function() {
-      // If a link has a dropdown, add sub menu toggle.
-      $('nav ul li a:not(:only-child)').click(function(e) {
-        if ($(window).width() < 1100) {
-          // For mobile devices, toggle the dropdown on click
-          e.preventDefault();
-          $(this).siblings('.nav-dropdown').slideToggle();
-        }
-      });
-  
-      // Close one dropdown when selecting another
-      $('nav ul li .nav-link').click(function(e) {
-        if ($(window).width() < 1100) {
-          $(this).closest('li').siblings().find('.nav-dropdown').hide();
-        }
-      });
-  
-      // Clicking away from dropdown will remove the dropdown class
-      $('html').click(function() {
-        $('.nav-dropdown').hide();
-      });
-  
-      // Toggle open and close nav styles on click
-      $('#nav-toggle').click(function() {
-        $('nav ul').slideToggle();
-      });
-  
-      // Hamburger to X toggle
-      $('#nav-toggle').on('click', function() {
-        this.classList.toggle('active');
-      });
+  $(document).ready(function() {
+    // Toggle dropdown on click
+    $('.nav-links li:has(ul)').click(function(e) {
+      e.stopPropagation();
+      $(this).toggleClass('open');
+      $(this).find('ul').slideToggle();
     });
-  })(jQuery);
+  
+    // Add chevron icon to parent li elements
+    $('.nav-links li:has(ul)').addClass('dropdown');
+  
+    // Append chevron icon to parent li elements
+    $('.nav-links li.dropdown > a').append('<span class="chevron"></span>');
+  });
+  
   
 
   document.addEventListener("DOMContentLoaded", function() {
