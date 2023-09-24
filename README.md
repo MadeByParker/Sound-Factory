@@ -15,7 +15,7 @@
   <a href="#license">License</a>
 </p>
 
-![screenshot](C:\Users\Harry%20Parker\Documents\ShareX\Screenshots\2023-09\chrome_PLILnbzEf0.gif)
+![screenshot](https://github.com/MadeByParker/Sound-Factory/blob/master/Showcase.gif)
 
 ## Portfolio
 
