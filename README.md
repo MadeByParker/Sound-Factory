@@ -1,68 +1,48 @@
-<a name="readme-top"></a>
+<h1 align="center">
+  <br>
+  <a href="https://soundfactorysw.com/"><img src="https://github.com/MadeByParker/Sound-Factory/blob/c80713bdffec458e14698ccee856b16dbd170470/public/images/Sound%20Factory%20Logo_Solid%20Black_Highlight.jpg" alt="Sound Factory" width="200"></a>
+  <br>
+  Sound Factory
+  <br>
+</h1>
 
-# Sound Factory
+<h4 align="center">A modern website built for the UK based music company <a href="https://soundfactorysw.com/" target="_blank">Sound Factory</a>.</h4>
 
-<br>
+<p align="center">
+  <a href="#portfolio">Portfolio</a> •
+  <a href="#about-sound-factory">About Sound Factory</a> •
+  <a href="#credits">Credits</a> •
+  <a href="#license">License</a>
+</p>
 
-<div align="center">
-  <a href="https://github.com/Parker06/Sound-Factory">
-    <img src="public\images\Sound Factory Logo_Solid Black_Highlight.jpg" alt="Logo" width="180" height="80">
-  </a>
-</div>
+![screenshot](C:\Users\Harry%20Parker\Documents\ShareX\Screenshots\2023-09\chrome_PLILnbzEf0.gif)
 
-<br>
+## Portfolio
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-sound-factory">About Sound Factory</a>
-    </li>
-    <li><a href="#hosting">Hosting</a></li>
-    <li><a href="tech-stacj">Tech Stack</a></li>
-    <li><a href="#credits-and-resources">Credits / Resources</a>
-      <ul>
-        <li><a href="#general">General</a></li>
-        <li><a href="#web-app">Web App</a></li>
-      </ul>
-    </li>
-  </ol>
-</details>
-
+This project is a company portfolio website to showcase the work of Sound Factory and advertise the brillant services that they offer.
 
 ## About Sound Factory
 
-Sound Factory is a company where music creation is made possible to upcoming artists by giving them an opportunity to use a correct environment and tools to create music. Sound factory is also working on projects that works with up and coming or established artists that wish to pursue gigs under our Sound Factory Live Promotions events, or that wish to take part in Sound Factory Live Sessions. During these sessions, we record and film live performances of artists in preparation for public viewing via social media outlets. Lastly, we are going to offer studios to artists providing them however experienced they may be with quality recorded tracks to ensure they get the best out of their potential.
+Sound Factory is a dynamic company that empowers musicians at all skill levels through its three distinctive divisions: Sound Factory Live, Sound Factory Studio, and Sound Factory School. The latter 2 sectors are set to launch in 2024.
 
-The website can be found at [https://soundfactorysw.com](https://soundfactorysw.com/).
+Sound Factory Live is currently collaborating with emerging and established artists who aspire to engage in two exciting opportunities: Sound Factory Live Promotions events and Sound Factory Live Sessions.
 
-## Tech Stack
+In the Live Sessions, they record, mix, film, and edit live performances, preparing them for public consumption through various social media platforms. These creative endeavors are orchestrated by seasoned videographers who have honed their craft at renowned establishments such as Abbey Road Studios, Sony, and BBC live sessions. The live sound experience is carefully engineered and mixed by a team boasting a rich history of engineering and producing iconic albums for artists like Oasis, Stone Roses, The Verve, Supergrass, Robert Plant, Muse, and many other celebrated acts.
 
-<img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/html5/html5-plain.svg" alt="HTML5" width="50" height="50"/>  &nbsp; <img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/css3/css3-original.svg" alt="CSS3" width="50" height="50"/> &nbsp; <img  src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/javascript/javascript-original.svg" alt="JavaScript" width="50" height="50"/> 
+## Credits
 
+This software uses the following open source packages:
 
-<!--Screenshot Template<details>
-	<summary><b></b></summary>
-	<img src=""/><br>
-</details>-->
+- HTML
+- CSS
+- Vanilla JavaScipt
 
+## License
 
-## Credits and Resources
+MIT
 
-### General
+---
 
-| Resource                      | URL                                                         |
-| ----------------------------- | ----------------------------------------------------------- |
-| Adobe Color                   | [Website](https://color.adobe.com/create/color-wheel)       |
-| Adobe Photoshop 2023          | [Website](https://www.adobe.com/uk/products/photoshop.html) |
-| Figma                         | [Website](www.figma.com/)                                   |
-
-
-### Website
-
-| Resource          | URL                                                                                               |
-| ----------------- | ------------------------------------------------------------------------------------------------- |
-| Unsplash          | [Unsplash](https://unsplash.com/)                                                                 |
-| Google Firebase   | [Website](https://firebase.google.com) [Documentation](https://firebase.google.com/docs)          |
-| JQuery            | [Website](https://jquery.com)                                                                     |
-
+> [harryparker.co.uk](https://www.harryparker.co.uk) &nbsp;&middot;&nbsp;
+> GitHub [@MadeByParker](https://github.com/MadeByParker) &nbsp;&middot;&nbsp;
+> Instagram [@_madebyparker](https://instagram.com/_madebyparker)
