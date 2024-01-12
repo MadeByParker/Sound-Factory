@@ -68,6 +68,8 @@ text-decoration: none;
 font-family: "Exo 2", sans-serif;
 }
 
+
+
 *,
 *::before,
 *::after {
@@ -86,7 +88,7 @@ body {
 
 body{
     overflow-x: hidden;
-    background-color: #131313;
+    background-color: #000000;
     padding: 0;
     margin: 0;
 }
@@ -99,7 +101,7 @@ a {
 nav {
     width: 100%;
     color: white;
-    background-color: #131418;
+    background-color: #000000;
     box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-between;
@@ -253,6 +255,7 @@ nav {
 /* Styling Hamburger Icon */
 .hamburger {
     display: none;
+    padding-right: 20px;
   }
   
   .hamburger .line {
@@ -260,6 +263,7 @@ nav {
     height: 3px;
     background: #f2f5f7;
     margin: 5px;
+    padding-right: 10px;
     transition: all 0.3s ease;
   }
 
@@ -371,7 +375,8 @@ nav {
   
 
 
-/* Styling for the slider */
+/* Styling for the home page */
+/*slider div*/
 .slider, 
 .slider > div {
     /* Images default to Center Center. Maybe try 'center top'? */
@@ -379,9 +384,11 @@ nav {
     background-position: center center;
     display: block;
     width: 100%;
-    height: 700px;
+    height: 1050px;
     /* height: 100vh; *//* If you want fullscreen */
-    position: relative;
+    position:relative;
+    padding-top: 50px;
+    background-origin: content-box;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #000;
@@ -392,10 +399,35 @@ nav {
     transition: transform .4s;
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .slider,
+    .slider > div {
+        height: 80vh;
+        width: 100%; /* Adjust as needed */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .slider,
+    .slider > div {
+        height: 60vh;
+        width: 100%; /* Adjust as needed */
+    }
+}
+
+.slider > div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the entire div */
+}
+
+
 .slider > div {
     position: absolute;
 }
 
+/*slider arrows*/
 .slider > i {
     color: var(--highlight-color);
     position: absolute;
@@ -415,6 +447,7 @@ nav {
     z-index: 4;
 }
 
+/*slider arrow icons*/
 .slider > i svg {
     margin-top: 3px;
 }
@@ -609,6 +642,117 @@ nav {
     100% {
         transform: scale(1);
     }
+}
+
+/* Section Styles */
+.home_section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto; /* Center the container */
+    max-width: 1000px; /* Set a maximum width if needed */
+    color: var(--white);
+}
+
+.section__item {
+    box-sizing: border-box;
+    padding: 10px; /* 1 */
+    width: 50%; /* 1 - Set each item to take up 50% of the width */
+}
+
+.section__item img {
+    max-width: 100%; /* 5 - Make sure the image doesn't exceed the container width */
+    height: auto; /* 5 - Maintain the image aspect ratio */
+    object-fit: cover; /* 5 */
+    object-position: center; /* 5 */
+}
+
+.section1 .section__item:nth-child(odd) {
+    order: 1; /* 3 - For section1, odd rows have text on the right */
+}
+
+.section1 .section__item:nth-child(even) {
+    order: 2; /* 3 - For section1, even rows have text on the left */
+}
+
+.section2 .section__item:nth-child(odd) {
+    order: 2; /* 3 - For section2, odd rows have text on the left */
+}
+
+.section2 .section__item:nth-child(even) {
+    order: 1; /* 3 - For section2, even rows have text on the right */
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .home_section {
+        flex-direction: column; /* Adjust flex-direction for single column mode */
+    }
+
+    .section__item {
+        width: 100%; /* 4 */
+        order: unset; /* Reset order for single column mode */
+        margin-top: 20px; /* 2 */
+    }
+
+    .section__item img {
+        width: 100%; /* 6 */
+        max-width: 100%; /* Ensure responsiveness on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 400px; /* Example: Set a max-height for the images on smaller screens */
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .section__item img {
+        max-width: 100%; /* Set a max-width for the images on larger screens */
+        max-height: 600px; /* Example: Set a max-height for the images on larger screens */
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section__item {
+        width: calc(33.3333% - 20px); /* Example: 3 items per row on larger screens */
+        order: unset; /* Reset order for larger screens */
+    }
+}
+
+/* Additional Styles */
+.section__item * + * {
+    margin-top: 10px; /* 2 */
+}
+
+.center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+
+}
+
+.center-image img {
+    width: 100%;
+    max-width: 800px; /* Adjust the maximum width as needed */
+    height: 100%;
+    max-height: 1200px; /* Adjust the maximum height as needed */
+    object-fit: cover;
+    object-position: center;
+    padding-top: 10rem;
+    margin-bottom: -15rem;
+}
+
+@media screen and (max-width: 768px) {
+    .center-image img {
+        width: 100%;
+        max-width: 400px; /* Adjust the maximum width as needed */
+        height: 100%;
+        max-height: 700px; /* Adjust the maximum height as needed */
+    }
+    
 }
 
 /* Styling the cards*/
@@ -835,6 +979,7 @@ ul{
     }
 }
 
+/*contact section*/
 .contact__container {
     display: flex;
     flex-direction: column;
@@ -915,6 +1060,7 @@ ul{
     object-fit: cover;
 }
 
+/* partnerships section */
 .partner-section {
     display: flex;
     justify-content: center;
@@ -1066,13 +1212,13 @@ ul{
     background-color: #222222;
 }
 
-
+/*coming soon page*/
 .coming-soon {
     text-align: center;
     font-size: 4rem;
     letter-spacing: 0.1rem;
     color: #fff;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1083,8 +1229,6 @@ ul{
   .coming-soon h1 {
     letter-spacing: 0.1rem;
     text-transform: uppercase;
-    padding: 1rem;
-    margin: 0;
     font-size: 6rem;
     font-weight: bold;
     color: #fff;
@@ -1092,22 +1236,18 @@ ul{
   
   .coming-soon p {
     color: #fff;
-    margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 2rem;
   }
   
   @media screen and (max-width: 768px) {
-    .coming-soon {
-      font-size: 2rem;
-    }
-    
     .coming-soon h1 {
-      font-size: 4rem;
+      font-size: 2rem;
     }
     
     .coming-soon p {
       font-size: 1.5rem;
+      padding-bottom: 1rem;
     }
   }
   
