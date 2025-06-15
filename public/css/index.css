@@ -1757,7 +1757,16 @@ ul {
     margin: 25px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
+    .home-content-section img {
+        margin: 0;
+        padding: 5%; /* Adjust padding for smaller screens */
+        max-width: 60%;
+        max-height: 60vh; /* Set a maximum height for the image */
+    }
+}
+
+@media only screen and (max-width: 1200px) {
     .home-content-section {
         flex-direction: column;
         padding: 20px; /* Adjust padding for smaller screens */
